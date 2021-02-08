@@ -36,22 +36,14 @@ const LineChart = () => {
         text: 'Line Chart'
       },
       scales: {
-        yAxes: [
-          {
-            // ticks: {
-            //   min: 0,
-            //   max: 6,
-            //   stepSize: 1
-            // }
-          }
-        ]
+        yAxes: []
       }
     }
 
     return (
       <div>
         <h1>{currentWeekTotal}</h1>
-        <div>{percentageOfIncreaseOrDecrese} Increase & decreese sales amount par day</div>
+        <div>{percentageOfIncreaseOrDecrese} Increase & decreese orders per day</div>
         <Line data={data} options={options} />
       </div>
     );
