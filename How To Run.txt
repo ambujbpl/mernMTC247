@@ -1,0 +1,4 @@
+1 Go to api folder and run :- npm i && npm start
+2 Go to client folder and run :- npm i && npm start
+3 browse : http://localhost:3000
+4 we can test resfull api using postman script (inside on postman_script)

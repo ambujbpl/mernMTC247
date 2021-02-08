@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "97da7011-1754-4474-a7c3-5d304e1daf21",
+		"name": "onlinestore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"gloves\",\r\n    \"amount\":\"40\",\r\n    \"created_at\":\"2021-02-07\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/createProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createProduct"
+					]
+				},
+				"description": "localhost:8080/createProduct"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product\":\"601fd6d5155f013414fcd9b5\",\r\n    \"quantity\":4,\r\n    \"created_at\":\"2021-02-07\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/createOrder",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createOrder"
+					]
+				},
+				"description": "localhost:8080/createOrder"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getProducts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getProducts"
+					]
+				},
+				"description": "localhost:8080/getProduct"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getOrders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getOrders"
+					]
+				},
+				"description": "localhost:8080/getOrders"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Sale",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order\":\"601fd6e8155f013414fcd9b6\",\r\n    \"created_at\":\"2021-02-07\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/createSale",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createSale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Last Two Week Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getLastTwoWeekOrders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getLastTwoWeekOrders"
+					]
+				},
+				"description": "localhost:8080/getLastTwoWeekOrders"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Last Week Sales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getLastWeekSales",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getLastWeekSales"
+					]
+				},
+				"description": "localhost:8080/getLastWeekSales"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Last Week Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getLastWeekOrders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getLastWeekOrders"
+					]
+				},
+				"description": "localhost:8080/getLastWeekOrders"
+			},
+			"response": []
+		}
+	]
+}

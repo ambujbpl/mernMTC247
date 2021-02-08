@@ -1,0 +1,17 @@
+{"_id":{"$oid":"60201510f9801d347cd695e7"},"amount":"160","order":{"$oid":"601fd6e8155f013414fcd9b6"},"created_at":{"$date":"2021-02-07T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60201519f9801d347cd695e8"},"amount":"152","order":{"$oid":"601f95b6460ed053c8ef680e"},"created_at":{"$date":"2021-02-06T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60201533f9801d347cd695e9"},"amount":"24","order":{"$oid":"601f9695155f013414fcd969"},"created_at":{"$date":"2021-02-05T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"6020154af9801d347cd695ea"},"amount":"24","order":{"$oid":"601f96a4155f013414fcd96a"},"created_at":{"$date":"2021-02-04T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60201560f9801d347cd695eb"},"amount":"13500","order":{"$oid":"601f9739155f013414fcd96c"},"created_at":{"$date":"2021-02-03T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"6020157af9801d347cd695ec"},"amount":"1200","order":{"$oid":"601fad53155f013414fcd96e"},"created_at":{"$date":"2021-02-02T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60201591f9801d347cd695ed"},"amount":"15000","order":{"$oid":"601fae4d155f013414fcd972"},"created_at":{"$date":"2021-02-01T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"602015a9f9801d347cd695ee"},"amount":"110000","order":{"$oid":"601faf67155f013414fcd978"},"created_at":{"$date":"2021-01-31T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"602015bef9801d347cd695ef"},"amount":"192000","order":{"$oid":"601fb23f155f013414fcd980"},"created_at":{"$date":"2021-01-30T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60203118525d2a3fc40aba01"},"amount":"336000","order":{"$oid":"6020137f9a708b3850085452"},"created_at":{"$date":"2021-01-29T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60203128525d2a3fc40aba02"},"amount":"7","order":{"$oid":"602013619a708b3850085451"},"created_at":{"$date":"2021-01-28T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60203141525d2a3fc40aba03"},"amount":"15000","order":{"$oid":"6020133b70337b38bc5da80c"},"created_at":{"$date":"2021-01-27T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"6020315d525d2a3fc40aba04"},"amount":"390","order":{"$oid":"6020130a70337b38bc5da80b"},"created_at":{"$date":"2021-01-26T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60203175525d2a3fc40aba05"},"amount":"6000","order":{"$oid":"602012ede3914e43808e1ef1"},"created_at":{"$date":"2021-01-25T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"6020318a525d2a3fc40aba06"},"amount":"5390","order":{"$oid":"60201296fbccb72b842df76f"},"created_at":{"$date":"2021-01-24T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"6020319e525d2a3fc40aba07"},"amount":"50","order":{"$oid":"60201265fbccb72b842df76e"},"created_at":{"$date":"2021-01-23T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"602119960881491d5492fef8"},"amount":"280","order":{"$oid":"602119450881491d5492fef7"},"created_at":{"$date":"2021-02-08T00:00:00Z"},"__v":0}
