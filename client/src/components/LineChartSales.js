@@ -32,7 +32,7 @@ const LineChart = () => {
 
     const options = {
       title: {
-        display: true,
+        display: false,
         text: 'Line Chart'
       },
       scales: {
@@ -43,7 +43,7 @@ const LineChart = () => {
     return (
       <div>
         <h1>{currentWeekTotal}</h1>
-        <div>{percentageOfIncreaseOrDecrese} Increase & decreese sales amount par day</div>
+        <div>{percentageOfIncreaseOrDecrese} Increase & decreese sales amount per day</div>
         <Line data={data} options={options} />
       </div>
     );
