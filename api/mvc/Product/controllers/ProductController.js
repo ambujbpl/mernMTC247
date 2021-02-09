@@ -124,30 +124,13 @@ module.exports = {
 			data:{}
 		};
 		ProductService.GetLastWeekSales().then(function(current_weeks){
-      let dummy_data = _.groupBy(current_weeks, "created_at");
-      var total_current = 0;
-      let new_arr = [];
-       _.mapObject(dummy_data,function(val,key){
-         let total_amt = 0;
-         let plucked_amt = _.pluck(val,'amount');
-         plucked_amt.forEach(function(amt){
-           total_amt =  total_amt+ parseInt(amt);
-         });
-         new_arr.push(total_amt);
-       });
-
-      current_weeks = new_arr.map(ele => {
-        total_current += parseInt(ele);
-      });
+      const { new_arr,total_current } = getLastWeekCalculatedData(current_weeks,'amount');
       resp.data.current_weeks = new_arr;
       resp.data.current_weeks_total = total_current;
 			return ProductService.GetSecondLastWeekSales();
 		}).then(function(previous_weeks){
-			// resp.data.previous_weeks = previous_weeks;
-      var total_previous = 0;
-      previous_weeks.map(ele => {
-        total_previous += parseInt(ele.amount);
-      });
+      const { new_arr,total_previous } = getPreviousWeekCalculatedData(previous_weeks,'amount');
+      resp.data.previous_week = new_arr;
       resp.data.total_previous = total_previous;
       resp.data.percentage_of_increase_or_decrese = (resp.data.current_weeks_total - resp.data.total_previous) * .01;
 			return res.json(resp);
@@ -171,30 +154,13 @@ module.exports = {
       data:{}
     };
     ProductService.GetLastWeekOrders().then(function(current_weeks){
-      console.log('current_weeks : ',current_weeks)
-      let dummy_data = _.groupBy(current_weeks, "created_at");
-      var total_current = 0;
-      let new_arr = [];
-       _.mapObject(dummy_data,function(val,key){
-         let total_amt = 0;
-         let plucked_amt = _.pluck(val,'quantity');
-         plucked_amt.forEach(function(amt){
-           total_amt =  total_amt+ parseInt(amt);
-         });
-         new_arr.push(total_amt);
-       });
-
-      current_weeks = new_arr.map(ele => {
-        total_current += parseInt(ele);
-      });
+      const { new_arr,total_current } = getLastWeekCalculatedData(current_weeks,'quantity');
       resp.data.current_weeks = new_arr;
       resp.data.current_weeks_total = total_current;
       return ProductService.GetSecondLastWeekOrders();
     }).then(function(previous_weeks){
-      var total_previous = 0;
-      previous_weeks.map(ele => {
-        total_previous += parseInt(ele.amount);
-      });
+      const { new_arr,total_previous } = getPreviousWeekCalculatedData(previous_weeks,'quantity');
+      resp.data.previous_week = new_arr;
       resp.data.total_previous = total_previous;
       resp.data.percentage_of_increase_or_decrese = (resp.data.current_weeks_total - resp.data.total_previous) * .01;
       return res.json(resp);
@@ -203,3 +169,45 @@ module.exports = {
     });
   },
 };
+
+getPreviousWeekCalculatedData = (previous_weeks,by) => {
+  let dummy_data = _.groupBy(previous_weeks, "created_at");
+  var total_previous = 0;
+  let new_arr = [];
+  _.mapObject(dummy_data,function(val,key){
+    let total_amt = 0;
+    let plucked_amt = _.pluck(val,by);
+    plucked_amt.forEach(function(amt){
+      total_amt =  total_amt+ parseInt(amt);
+    });
+    new_arr.push(total_amt);
+  });
+  previous_weeks.map(ele => {
+    total_previous += parseInt(ele.amount);
+  });
+  return {
+    new_arr,
+    total_previous
+  }
+}
+
+getLastWeekCalculatedData = (current_weeks,by) => {
+  let dummy_data = _.groupBy(current_weeks, "created_at");
+  var total_current = 0;
+  let new_arr = [];
+  _.mapObject(dummy_data,function(val,key){
+    let total_amt = 0;
+    let plucked_amt = _.pluck(val,by);
+    plucked_amt.forEach(function(amt){
+      total_amt =  total_amt+ parseInt(amt);
+    });
+    new_arr.push(total_amt);
+  });
+  current_weeks = new_arr.map(ele => {
+    total_current += parseInt(ele);
+  });
+  return {
+    new_arr,
+    total_current
+  }
+}

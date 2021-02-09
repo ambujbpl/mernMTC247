@@ -90,8 +90,7 @@ function ProductsService() {
   function CreateSale(sale) {
     let deferred =  q.defer();
     Orders.find({_id:sale.order}).then(function(response) {
-      console.log(response);
-      if(response.length > 0){
+        if(response.length > 0){
         sale.amount = response[0].amount;        
         Sales.create(sale).then(function(response) {
           deferred.resolve(response);

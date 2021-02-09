@@ -48,3 +48,7 @@
 {"_id":{"$oid":"6020137f9a708b3850085452"},"amount":"336000","quantity":"7","product":{"$oid":"601fb220155f013414fcd97f"},"created_at":{"$date":"2021-01-23T00:00:00Z"},"__v":0}
 {"_id":{"$oid":"602117d59306765aa0eb32ff"},"amount":"9000","quantity":"2","product":{"$oid":"601f9702155f013414fcd96b"},"created_at":{"$date":"2021-02-07T00:00:00Z"},"__v":0}
 {"_id":{"$oid":"602119450881491d5492fef7"},"amount":"280","quantity":"2","product":{"$oid":"6021192a0881491d5492fef6"},"created_at":{"$date":"2021-02-08T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60221a9584d1115948306a8c"},"amount":"3000","quantity":"10","product":{"$oid":"601faf86155f013414fcd979"},"created_at":{"$date":"2021-02-09T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60221ad984d1115948306a8d"},"amount":"5100","quantity":"17","product":{"$oid":"601faf86155f013414fcd979"},"created_at":{"$date":"2021-02-08T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60221bc884d1115948306a8e"},"amount":"80000","quantity":"8","product":{"$oid":"601faf41155f013414fcd977"},"created_at":{"$date":"2021-02-05T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"60221c6384d1115948306a8f"},"amount":"1120000","quantity":"35","product":{"$oid":"601fad81155f013414fcd96f"},"created_at":{"$date":"2021-02-06T00:00:00Z"},"__v":0}
